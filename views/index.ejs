@@ -11,12 +11,13 @@
 <body>
     <div class="container">
         <% if(locals.qrCode){ %>
-            <img src="<%= qrCode %>" alt="qrCode">
+            <img src="<%= qrCode %>" alt="qrCode" height="300">
             <%}else{%>
                 <h1>Please fill the form </h1>
                 <%}%>
                     <form action="/generate" method="post">
-                        <input type="text" name="url" id="url" placeholder="URL here">
+                        <input type="text" name="url" id="url" placeholder="URL here"
+                            value="<%= locals.urlText ? urlText : "" %>" spellcheck ="false" autocomplete="false">
                         <input type="submit" value="Generate">
                     </form>
     </div>

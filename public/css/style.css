@@ -30,13 +30,16 @@ body {
     gap: 32px
 }
 
-.container>h1 {
+.container>h1,
+.container>img {
     font-size: 3rem;
     text-align: center;
+    margin-right: 20px;
 }
 
 .container>form {
     width: 60%;
+    margin-left: 50px;
     border-right: 2px solid var(--vio);
     display: flex;
     flex-flow: column nowrap;
@@ -49,12 +52,21 @@ body {
     width: 80%;
     font-size: 1.3rem;
     background-color: #FFF;
+    color: #292852;
     outline: none;
     padding: 20px 8px;
-    color: var(--vio);
     border: none;
     padding: 5px 10px;
     border-radius: 2px;
+    text-align: left;
+}
+
+.container>form>input::placeholder {
+    color: rgba(101, 101, 101, 0.2);
+    font-size: 16px;
+    font-style: italic;
+    text-align: left;
+
 }
 
 
@@ -76,4 +88,37 @@ body {
 .alert-text {
     color: #f92929;
     font-size: 2rem;
+}
+
+@media(max-width: 1025px) {
+
+    html {
+        font-size: 14px;
+    }
+
+    .container {
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        width: 80%;
+    }
+
+    .container form {
+        width: 90%;
+        border-top: 2px solid var(--vio);
+        border-right: none;
+        align-items: center;
+        padding-top: 20px;
+        margin: 0;
+    }
+
+    .container img {
+        height: 250px;
+    }
+
+    .container>form>input,
+    .container>form>input::placeholder {
+        text-align: center;
+    }
+
+
 }

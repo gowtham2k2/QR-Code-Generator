@@ -18,14 +18,14 @@ app.get("/", (req, res) => {
 });
 
 app.post("/generate", (req, res) => {
-  const url = req.body["url"];
+  const urlText = req.body["url"];
 
-  if (url !== "") {
+  if (urlText !== "") {
     var opts = {
       errorCorrectionLevel: "H",
       type: "image/jpeg",
       quality: 0.92,
-      scale: 8,
+      scale: 10,
       margin: 8,
       color: {
         dark: "#292852",
@@ -33,10 +33,11 @@ app.post("/generate", (req, res) => {
       },
     };
 
-    qr.toDataURL(url, opts, (err, url) => {
+    qr.toDataURL(urlText, opts, (err, url) => {
       if (err) throw err;
       res.render("index.ejs", {
         qrCode: url,
+        urlText: urlText,
       });
     });
   } else {
