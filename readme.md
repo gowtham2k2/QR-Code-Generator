@@ -22,12 +22,12 @@ This is a simple QR code generator application built with Node.js and Express. I
 2. Navigate to the project directory:
 
    ```bash
-   cd qrcode-generator
+   cd QR-Code-Generator
    ```
 
 3. Install the dependencies:
    ```bash
-   npm install
+   npm i
    ```
 
 ## Usage
