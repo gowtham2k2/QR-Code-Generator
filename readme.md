@@ -42,6 +42,7 @@ This is a simple QR code generator application built with Node.js and Express. I
 
 3. Enter a URL in the input field and click "Generate" to receive the QR code.
 
+## Output
 <div align="center"><img src="./eg_img/eg1.jpg" height= "200"/>
 <img src="./eg_img/eg2.jpg" height= "200"/>
 </div>
