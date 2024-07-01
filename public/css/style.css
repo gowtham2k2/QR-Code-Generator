@@ -1,0 +1,79 @@
+:root {
+    --blue: #BBE9FF;
+    --yellow: #f6f6f2;
+    --vio: #B1AFFF;
+    --brown: #FFE9D0;
+}
+
+body {
+    background-image: linear-gradient(225deg, var(--blue), var(--vio) 50%);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #292852;
+}
+
+
+.container {
+    color: var(--vio);
+    background-color: var(--yellow);
+    width: 50%;
+    height: 50%;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 32px
+}
+
+.container>h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.container>form {
+    width: 60%;
+    border-right: 2px solid var(--vio);
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 28px;
+    justify-content: center;
+    align-items: start;
+}
+
+.container>form>input {
+    width: 80%;
+    font-size: 1.3rem;
+    background-color: #FFF;
+    outline: none;
+    padding: 20px 8px;
+    color: var(--vio);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+
+
+.container>form>input[type="submit"] {
+    width: max-content;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 5px;
+    background-color: var(--vio);
+    color: #fff;
+}
+
+.container>form>input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #827fdb;
+}
+
+.alert-text {
+    color: #f92929;
+    font-size: 2rem;
+}
